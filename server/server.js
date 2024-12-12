@@ -21,7 +21,7 @@ app.post('/', async (req, res) => {
     const conversation = req.body.conversation;
 
     const response = await openai.createChatCompletion({
-      model: 'gpt-3.5-turbo',
+      model: 'gpt-4-turbo',
       temperature: 1.0,
       max_tokens: 500,
       frequency_penalty: 0.2,
@@ -31,7 +31,7 @@ app.post('/', async (req, res) => {
           role: 'system',
           content: `this is current conversation: ${conversation}. always write programming 
           language name inside code. Only put code inside three backticks 
-          Your name is chatGPT 2.5, developed with gpt 3.5 turbo,
+          Your name is chatGPT 2.5, developed with gpt 4 turbo,
           created by Akaki Gogokhia, you have image generation, 
           voice assistant and speech recognition`,
         },

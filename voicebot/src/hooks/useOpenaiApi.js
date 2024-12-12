@@ -1,5 +1,4 @@
-import { useState, useEffect, useContext } from 'react';
-import { ChatContext } from '../contexts/ChatContext';
+import { useState, useEffect } from 'react';
 
 export const useOpenaiApi = (prompt, conversation) => {
   const [response, setResponse] = useState('');
